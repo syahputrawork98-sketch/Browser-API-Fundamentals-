@@ -1,331 +1,237 @@
-Browser API Fundamental
+📘 Browser API Fundamental
 
-Long-term reference repository for understanding the Web Platform and Browser APIs at architectural depth.
+> Long-term reference repository for understanding the Web Platform & Browser APIs at architectural depth.
 
-1. Project Vision
+---
 
-Repository ini adalah dokumentasi fundamental tentang Web Platform & Browser APIs, dibangun secara sistematis dan jangka panjang.
+## 1. Project Vision
 
-Tujuan utama repository ini:
+Repository ini adalah dokumentasi fundamental tentang **Web Platform & Browser APIs**, dibangun secara sistematis dan jangka panjang.
 
-Memahami bahwa JavaScript (ECMAScript) ≠ Web APIs
+Tujuan utama:
 
-Memahami arsitektur Web Platform secara utuh
-
-Membangun mental model runtime browser
-
-Menghilangkan miskonsepsi seperti:
-
-“JavaScript bisa melakukan networking”
-
-“JavaScript punya setTimeout”
-
-“JavaScript punya DOM”
+- Memahami bahwa **ECMAScript (JavaScript language)** ≠ **Web APIs**
+- Membangun mental model arsitektur Web Platform
+- Memahami runtime model browser
+- Menghilangkan miskonsepsi seperti:
+  - "JavaScript punya fetch"
+  - "JavaScript punya DOM"
+  - "JavaScript punya setTimeout"
+  - "Event loop adalah bagian dari JavaScript"
 
 Padahal secara spesifikasi:
 
-Fitur	Didefinisikan oleh
-Promise	ECMAScript (TC39)
-fetch	Fetch Standard (WHATWG)
-DOM	DOM Standard
-setTimeout	HTML Standard
-Event Loop	HTML Standard
-Rendering	Rendering Engine (Blink/WebKit/Gecko)
-2. Web Platform Architecture (Mental Model)
+| Fitur | Didefinisikan oleh |
+|--------|-------------------|
+| Promise | ECMAScript (TC39) |
+| Array / Map / Set | ECMAScript |
+| fetch | Fetch Standard (WHATWG) |
+| DOM | DOM Standard |
+| setTimeout | HTML Standard |
+| Event Loop | HTML Standard |
+| Rendering | Rendering Engine |
+
+---
+
+## 2. Web Platform Architecture (Mental Model)
+
+
 ECMAScript (Language Spec - TC39)
-        ↓
+↓
 JavaScript Engine (V8 / SpiderMonkey / JSC)
-        ↓
+↓
 Web Platform (WHATWG Standards)
-        ↓
-Browser Implementation (Blink / WebKit / Gecko)
-        ↓
+↓
+Browser Engine (Blink / WebKit / Gecko)
+↓
 OS & Networking Stack
-Penting:
 
-ECMAScript hanya mendefinisikan bahasa.
 
-Web APIs bukan bagian dari ECMAScript.
+Poin penting:
 
-Rendering tidak dijalankan oleh JS engine.
+- ECMAScript hanya mendefinisikan bahasa.
+- Web APIs bukan bagian dari ECMAScript.
+- Rendering tidak dijalankan oleh JavaScript engine.
+- Event loop bukan bagian dari ECMAScript.
 
-Event loop bukan milik ECMAScript.
+---
 
-3. Scope & Boundary
-Fokus Utama
+## 3. Scope & Boundary
 
-DOM Standard
+### Fokus
 
-Event System
+- DOM Standard
+- Event System
+- Fetch API
+- Storage APIs
+- URL & History
+- Timers
+- Web Workers
+- Service Workers
+- Cache Storage
+- Rendering interaction APIs
+- Security model
+- Page lifecycle
+- Event loop & scheduling
 
-Fetch API
+### Tidak Termasuk
 
-Storage APIs
+- Node.js APIs
+- Framework abstraction (React, Next, dll)
+- Tooling / bundler
+- Build system
 
-URL & History
+---
 
-Timers
-
-Web Workers
-
-Service Workers
-
-Cache Storage
-
-Rendering interaction APIs
-
-Security & Permission model
-
-Page Lifecycle
-
-Event Loop & Scheduling
-
-Tidak Termasuk
-
-Node.js APIs
-
-Framework abstraction (React, Next.js, dll)
-
-Tooling / bundler
-
-Build system
-
-4. Documentation Writing Standard (WAJIB DIIKUTI)
+## 4. Documentation Standard (WAJIB)
 
 Setiap topik HARUS mengikuti struktur berikut:
 
-1️⃣ Official Term
+### 1️⃣ Official Term
 
-Gunakan nama resmi dari spesifikasi.
+Gunakan istilah resmi spesifikasi.
 
-Contoh:
+### 2️⃣ Definisi Formal
 
-EventTarget
+Definisi teknis selaras dengan HTML / DOM / Fetch / ECMAScript spec.
 
-Event propagation
+### 3️⃣ Mental Model
 
-Task
+Penjelasan konseptual ringkas dan presisi.
 
-Microtask
+### 4️⃣ Runtime Perspective
 
-Update the rendering
+Wajib menjawab:
 
-Structured Clone
+- Berjalan di thread mana?
+- Masuk queue apa?
+- Siapa yang menjadwalkan?
+- Kapan rendering terjadi?
+- Dampak performa?
+- Dampak keamanan?
 
-Same-Origin Policy
+### 5️⃣ Kenapa API Ini Ada?
 
-2️⃣ Definisi Formal
+Masalah apa yang diselesaikan?  
+Kenapa bukan bagian dari ECMAScript?
 
-Definisi teknis yang selaras dengan:
+### 6️⃣ Contoh Minimal
 
-HTML Standard
+Kode runnable dan fokus konsep.
 
-DOM Standard
+### 7️⃣ Common Misconceptions
 
-Fetch Standard
+Koreksi miskonsepsi secara eksplisit.
 
-ECMAScript Spec
-
-MDN (terminology alignment)
-
-3️⃣ Mental Model Sederhana
-
-Penjelasan konseptual ringkas tanpa analogi berlebihan.
-
-4️⃣ Runtime Perspective (WAJIB)
-
-Harus menjawab:
-
-Berjalan di thread mana?
-
-Masuk queue apa?
-
-Siapa yang menjadwalkan?
-
-Kapan rendering terjadi?
-
-Dampak ke performa?
-
-Dampak ke keamanan?
-
-5️⃣ Kenapa API Ini Ada?
-
-Masalah apa yang diselesaikan?
-
-Kenapa tidak menjadi bagian ECMAScript?
-
-6️⃣ Contoh Kode Minimal
-
-Runnable
-
-Fokus ke konsep
-
-Tidak kompleks
-
-7️⃣ Common Misconceptions
-
-Contoh:
-
-❌ "setTimeout adalah bagian dari JavaScript"
-✔️ Salah. Itu bagian dari HTML Standard.
-
-8️⃣ Pitfall & Best Practices
+### 8️⃣ Pitfall & Best Practices
 
 Bahas:
 
-Memory leak
+- Memory leak
+- Detached DOM
+- Closure retention
+- Race condition
+- Forced synchronous layout
+- Structured clone cost
+- Security implication
 
-Detached DOM
+### 9️⃣ Prerequisite
 
-Closure retention
+Konsep yang harus dipahami sebelumnya.
 
-Race condition
+### 🔟 Next Topics
 
-Forced synchronous layout
+Topik lanjutan yang relevan.
 
-Structured clone cost
+---
 
-Security implication
+## 5. Core Knowledge Areas
 
-Browser implementation differences
+Repository ini wajib membahas:
 
-9️⃣ Prerequisite Concepts
+### Web Platform Spec Landscape
 
-Topik yang harus dipahami sebelumnya.
+- ECMAScript (TC39)
+- HTML Standard (WHATWG)
+- DOM Standard
+- Fetch Standard
+- Streams Standard
+- CSSOM
+- Infra Standard
+- Web IDL
 
-🔟 Next Topics
+### Event Loop & Scheduling
 
-Relasi ke topik lanjutan.
+- Task
+- Microtask
+- Rendering opportunity
+- requestAnimationFrame
+- Long task
+- Frame budget (~16.67ms)
 
-5. Core Knowledge Areas
+### Rendering Pipeline
 
-Repository ini wajib membahas secara mendalam:
+- Style calculation
+- Layout
+- Paint
+- Composite
+- Main thread blocking
 
-5.1 Web Platform Spec Landscape
+### Memory Model
 
-ECMAScript → TC39
+- Reachability
+- Garbage collection
+- Detached DOM nodes
+- Structured clone
+- Transferable objects
 
-HTML Standard → WHATWG
+### Concurrency Model
 
-DOM Standard
+- Single-threaded JS execution
+- Web Workers
+- MessageChannel
+- SharedArrayBuffer (cross-origin isolation)
 
-Fetch Standard
+### Networking & Security
 
-Streams Standard
+- Same-Origin Policy
+- CORS
+- Preflight
+- Credentials mode
+- Mixed content
+- Secure Context
+- Permissions API
 
-CSSOM
+### Document Lifecycle
 
-Infra Standard
+- DOMContentLoaded
+- load
+- beforeunload
+- visibilitychange
+- bfcache
 
-Web IDL
+### Browser Process Model
 
-5.2 Event Loop & Scheduling Model
+- Browser process
+- Renderer process
+- GPU process
+- Site isolation
 
-Task queue
+---
 
-Microtask queue
+## 6. Ultimate Goal
 
-Rendering opportunity
+Setelah memahami repository ini, pembaca harus mampu menjelaskan:
 
-requestAnimationFrame
+- Bagaimana event dipropagasikan
+- Bagaimana task & microtask dijadwalkan
+- Kapan rendering terjadi
+- Bagaimana networking diproses
+- Bagaimana storage bekerja
+- Bagaimana security boundary membatasi akses
+- Bagaimana concurrency dikontrol
 
-Long task
+Tujuan akhirnya:
 
-Frame budget (~16.67ms)
-
-5.3 Rendering Pipeline
-
-Style calculation
-
-Layout (reflow)
-
-Paint
-
-Composite
-
-Main thread blocking
-
-Forced synchronous layout
-
-5.4 Memory & Object Lifetime
-
-Reachability
-
-Garbage collection
-
-Detached DOM nodes
-
-Event listener leak
-
-Structured clone vs Transferable
-
-5.5 Concurrency Model
-
-Single-threaded execution
-
-Web Workers
-
-MessageChannel
-
-Structured clone algorithm
-
-SharedArrayBuffer (cross-origin isolation)
-
-5.6 Networking & Security Model
-
-Same-Origin Policy
-
-CORS
-
-Preflight
-
-Credentials mode
-
-Mixed content
-
-Secure Context
-
-Permissions API
-
-Cross-Origin Isolation
-
-5.7 Document & Page Lifecycle
-
-DOMContentLoaded
-
-load
-
-beforeunload
-
-visibilitychange
-
-Page Lifecycle API
-
-bfcache
-
-5.8 Browser Process Model
-
-Browser process
-
-Renderer process
-
-GPU process
-
-Site isolation
-
-6. Repository Structure (Recommended)
-/docs
-  /architecture
-  /event-loop
-  /dom
-  /fetch
-  /storage
-  /rendering
-  /security
-  /workers
-  /lifecycle
-  /memory
-  /spec-reading
-README.md
-CONTRIBUTING.md
-AI_RULES.md
+Tidak hanya tahu *apa yang terjadi*,  
+tetapi tahu *mengapa dan bagaimana browser melakukannya*.
