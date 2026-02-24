@@ -7,6 +7,7 @@
 ## Documentation Index
 
 - [Documentation Map](./docs/README.md)
+- [Contribution Rules](./RULES.md)
 - [Next Topics Index](./docs/next-topics/README.md)
 - [Glossary Istilah Wajib](./docs/glossary/README.md)
 - [Cross-Topic Architecture Diagram](./docs/cross-topic-architecture/README.md)

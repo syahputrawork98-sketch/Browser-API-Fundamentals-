@@ -4,6 +4,10 @@ Terima kasih atas kontribusinya.
 
 Repository ini memiliki standar teknis yang ketat.
 
+Rujukan aturan kontribusi terpusat:
+
+- [Contribution Rules](./RULES.md)
+
 ---
 
 ## 1. Spec-Aligned Only

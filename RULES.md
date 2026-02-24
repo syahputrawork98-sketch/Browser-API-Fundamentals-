@@ -1,4 +1,4 @@
-# AI Contribution Rules
+# Contribution Rules
 
 File ini adalah kontrak instruksi untuk AI yang membantu menulis repository ini.
 
