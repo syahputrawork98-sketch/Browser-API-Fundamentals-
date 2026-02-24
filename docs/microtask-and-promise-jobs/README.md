@@ -1,4 +1,4 @@
-# Microtask and Promise Jobs Integration
+﻿# Microtask and Promise Jobs Integration
 
 ## 1. Official Term
 
@@ -102,12 +102,14 @@ Urutan utama: log sinkron task -> semua microtask -> task timer.
 
 ## 10. Next Topics
 
-- `requestAnimationFrame` and rendering synchronization
-- Long tasks API and responsiveness diagnostics
-- Worker model for CPU-bound isolation
+- [requestAnimationFrame](../request-animation-frame/README.md)
+- [Long tasks API and responsiveness diagnostics](../next-topics/long-tasks-api-and-responsiveness-diagnostics/README.md)
+- [Web Workers and Message Passing](../web-workers-and-message-passing/README.md)
 
 ## References
 
 - HTML Standard (microtask queuing): https://html.spec.whatwg.org/multipage/webappapis.html#microtask-queuing
 - HTML Standard (event loops): https://html.spec.whatwg.org/multipage/webappapis.html#event-loops
 - ECMAScript (Jobs and Job Queues): https://tc39.es/ecma262/#sec-jobs-and-job-queues
+
+

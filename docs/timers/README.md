@@ -1,4 +1,4 @@
-# Timers (HTML Standard)
+﻿# Timers (HTML Standard)
 
 ## 1. Official Term
 
@@ -98,12 +98,14 @@ Walau delay `0`, callback tetap menunggu task saat ini selesai, sehingga hasil n
 
 ## 10. Next Topics
 
-- Microtask and Promise jobs integration
-- `requestAnimationFrame` for visual work
-- Page Visibility and background throttling
-- Long tasks and responsiveness
+- [Microtask and Promise Jobs Integration](../microtask-and-promise-jobs/README.md)
+- [requestAnimationFrame](../request-animation-frame/README.md)
+- [Page Visibility and background throttling](../next-topics/page-visibility-and-background-throttling/README.md)
+- [Long tasks and responsiveness](../next-topics/long-tasks-and-responsiveness/README.md)
 
 ## References
 
 - HTML Standard (timers): https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#timers
 - HTML Standard (event loops): https://html.spec.whatwg.org/multipage/webappapis.html#event-loops
+
+

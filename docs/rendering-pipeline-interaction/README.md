@@ -1,4 +1,4 @@
-# Rendering Pipeline Interaction
+﻿# Rendering Pipeline Interaction
 
 ## 1. Official Term
 
@@ -101,12 +101,14 @@ Pola write lalu read layout dalam tick yang sama dapat memicu forced synchronous
 
 ## 10. Next Topics
 
-- Frame budget and long tasks
-- CSS containment and rendering isolation
-- PerformanceObserver and rendering diagnostics
+- [Frame budget and long tasks](../next-topics/frame-budget-and-long-tasks/README.md)
+- [CSS containment and rendering isolation](../next-topics/css-containment-and-rendering-isolation/README.md)
+- [PerformanceObserver and rendering diagnostics](../next-topics/performanceobserver-and-rendering-diagnostics/README.md)
 
 ## References
 
 - HTML Standard (event loop rendering integration): https://html.spec.whatwg.org/multipage/webappapis.html#event-loops
 - CSSOM specification: https://drafts.csswg.org/cssom/
 - Rendering performance fundamentals (web.dev): https://web.dev/rendering-performance/
+
+

@@ -1,4 +1,4 @@
-# Event Propagation Model (DOM Standard)
+﻿# Event Propagation Model (DOM Standard)
 
 ## 1. Official Term
 
@@ -8,7 +8,7 @@ Event dispatch and event propagation (capturing phase, target phase, bubbling ph
 
 Event propagation adalah algoritma dispatch event pada DOM Standard yang menentukan jalur (event path) dan urutan listener invocation dari root ke target lalu kembali ke ancestor (jika event bersifat bubbling).
 
-Model ini adalah bagian dari Web Platform (DOM/HTML integration), bukan ECMAScript language.
+Model ini adalah bagian dari Web Platform (DOM/HTML integration), bukan bagian dari ECMAScript language specification.
 
 ## 3. Mental Model
 
@@ -100,12 +100,14 @@ Urutan log ketika tombol diklik:
 
 ## 10. Next Topics
 
-- Shadow DOM event retargeting and composed path
-- Default action and cancelation model
-- Pointer and keyboard event specifics
+- [Shadow DOM event retargeting and composed path](../next-topics/shadow-dom-event-retargeting-and-composed-path/README.md)
+- [Default action and cancelation model](../next-topics/default-action-and-cancelation-model/README.md)
+- [Pointer and keyboard event specifics](../next-topics/pointer-and-keyboard-event-specifics/README.md)
 
 ## References
 
 - DOM Standard (events): https://dom.spec.whatwg.org/#events
 - DOM Standard (dispatching events): https://dom.spec.whatwg.org/#concept-event-dispatch
 - HTML Standard (event handlers integration): https://html.spec.whatwg.org/
+
+

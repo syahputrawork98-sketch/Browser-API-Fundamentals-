@@ -1,4 +1,4 @@
-# Event Loop (HTML Standard)
+﻿# Event Loop (HTML Standard)
 
 ## 1. Official Term
 
@@ -109,14 +109,16 @@ Penjelasan: script awal berjalan sebagai task. Setelah stack kosong, microtask d
 
 ## 10. Next Topics
 
-- Timers (HTML Standard)
-- Microtask and Promise jobs integration
-- Rendering pipeline and frame budget
-- `requestAnimationFrame` and visual scheduling
-- Long tasks and responsiveness metrics
+- [Timers](../timers/README.md)
+- [Microtask and Promise Jobs Integration](../microtask-and-promise-jobs/README.md)
+- [Rendering Pipeline Interaction](../rendering-pipeline-interaction/README.md)
+- [requestAnimationFrame](../request-animation-frame/README.md)
+- [Long tasks and responsiveness metrics](../next-topics/long-tasks-and-responsiveness-metrics/README.md)
 
 ## References
 
 - HTML Standard (event loops): https://html.spec.whatwg.org/multipage/webappapis.html#event-loops
 - HTML Standard (timers): https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#timers
 - ECMAScript (Jobs and Job Queues): https://tc39.es/ecma262/#sec-jobs-and-job-queues
+
+

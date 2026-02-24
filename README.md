@@ -7,6 +7,20 @@
 ## Documentation Index
 
 - [Documentation Map](./docs/README.md)
+- [Next Topics Index](./docs/next-topics/README.md)
+- [Glossary Istilah Wajib](./docs/glossary/README.md)
+- [Cross-Topic Architecture Diagram](./docs/cross-topic-architecture/README.md)
+
+---
+
+## Official Learning Path (Urutan Baca Wajib)
+
+1. Foundation Runtime -> [Event Loop](./docs/event-loop/README.md) -> [Timers](./docs/timers/README.md) -> [Microtask and Promise Jobs Integration](./docs/microtask-and-promise-jobs/README.md) -> [requestAnimationFrame](./docs/request-animation-frame/README.md) -> [Rendering Pipeline Interaction](./docs/rendering-pipeline-interaction/README.md)
+2. DOM and Interaction -> [DOM Standard Fundamentals](./docs/dom-standard-fundamentals/README.md) -> [Event Propagation Model](./docs/event-propagation-model/README.md)
+3. Networking and Security Boundary -> [Fetch Lifecycle](./docs/fetch-lifecycle/README.md) -> [Security Boundary](./docs/security-boundary/README.md)
+4. Persistence and Navigation -> [Storage Model and Quota](./docs/storage-model-and-quota/README.md) -> [URL and History Model](./docs/url-and-history-model/README.md) -> [Document Lifecycle Deep Dive](./docs/document-lifecycle-deep-dive/README.md)
+5. Concurrency and Platform Architecture -> [Web Workers and Message Passing](./docs/web-workers-and-message-passing/README.md) -> [Service Worker Lifecycle and Cache Storage](./docs/service-worker-lifecycle-and-cache-storage/README.md) -> [Browser Process Model Deep Dive](./docs/browser-process-model-deep-dive/README.md)
+6. Advanced Track -> [Long Tasks and PerformanceObserver](./docs/long-tasks-and-performance-observer/README.md) -> [Streams Deep Dive](./docs/streams-deep-dive/README.md) -> [CSP, Trusted Types, and COOP/COEP](./docs/csp-trusted-types-coop-coep/README.md)
 
 ---
 

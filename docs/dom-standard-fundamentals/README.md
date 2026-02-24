@@ -1,4 +1,4 @@
-# DOM Standard Fundamentals
+﻿# DOM Standard Fundamentals
 
 ## 1. Official Term
 
@@ -68,7 +68,7 @@ Contoh ini memodifikasi node tree runtime, bukan memodifikasi source HTML file.
 ## 7. Common Misconceptions
 
 - "DOM adalah bagian dari JavaScript."
-  - Koreksi: DOM adalah Web API standard, dipakai lewat JavaScript di browser.
+  - Koreksi: DOM adalah Web API pada Web Platform, dipakai lewat JavaScript di browser.
 - "Mengubah DOM langsung berarti browser langsung paint saat itu juga."
   - Koreksi: paint terjadi sesuai scheduling rendering pipeline.
 - "Detached DOM otomatis aman."
@@ -94,12 +94,14 @@ Contoh ini memodifikasi node tree runtime, bukan memodifikasi source HTML file.
 
 ## 10. Next Topics
 
-- Event propagation model
-- Rendering pipeline interaction
-- MutationObserver and structured mutation tracking
+- [Event Propagation Model](../event-propagation-model/README.md)
+- [Rendering Pipeline Interaction](../rendering-pipeline-interaction/README.md)
+- [MutationObserver and structured mutation tracking](../next-topics/mutationobserver-and-structured-mutation-tracking/README.md)
 
 ## References
 
 - DOM Standard: https://dom.spec.whatwg.org/
 - DOM Standard (node tree): https://dom.spec.whatwg.org/#concept-tree
 - HTML Standard (parsing and DOM integration): https://html.spec.whatwg.org/
+
+

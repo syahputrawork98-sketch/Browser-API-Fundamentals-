@@ -1,4 +1,4 @@
-# Fetch Lifecycle (Fetch Standard)
+﻿# Fetch Lifecycle (Fetch Standard)
 
 ## 1. Official Term
 
@@ -8,7 +8,7 @@ Fetch API and the fetch process (request, response, body streams, and abort).
 
 Fetch adalah algoritma networking di Fetch Standard untuk memproses `Request` menjadi `Response`, termasuk mode keamanan (CORS/same-origin), redirect handling, credentials mode, cache interaction, serta body streaming.
 
-`fetch()` adalah Web API host, bukan bagian dari ECMAScript language specification.
+`fetch()` adalah Web API pada host environment browser, bukan bagian dari ECMAScript language specification.
 
 ## 3. Mental Model
 
@@ -108,13 +108,15 @@ Fetch menggantikan model lama yang lebih terbatas dan menyediakan kontrak yang l
 
 ## 10. Next Topics
 
-- CORS and preflight deep dive
-- Streams API integration
-- Service Worker fetch interception
-- Cache Storage strategy and consistency
+- [Security Boundary](../security-boundary/README.md)
+- [Streams API integration](../next-topics/streams-api-integration/README.md)
+- [Service Worker Lifecycle and Cache Storage](../service-worker-lifecycle-and-cache-storage/README.md)
+- [Storage Model and Quota](../storage-model-and-quota/README.md)
 
 ## References
 
 - Fetch Standard: https://fetch.spec.whatwg.org/
 - HTML Standard (integration with event loop): https://html.spec.whatwg.org/
 - MDN Fetch API overview (practical reference): https://developer.mozilla.org/docs/Web/API/Fetch_API
+
+

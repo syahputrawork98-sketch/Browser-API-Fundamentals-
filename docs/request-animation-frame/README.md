@@ -1,4 +1,4 @@
-# requestAnimationFrame (HTML Standard)
+﻿# requestAnimationFrame (HTML Standard)
 
 ## 1. Official Term
 
@@ -100,12 +100,14 @@ Contoh di atas menggerakkan elemen berdasarkan timestamp frame, bukan asumsi int
 
 ## 10. Next Topics
 
-- Rendering pipeline interaction details
-- Long Tasks API
-- Page Visibility and lifecycle-driven scheduling
-- Performance timeline and frame diagnostics
+- [Rendering Pipeline Interaction](../rendering-pipeline-interaction/README.md)
+- [Long Tasks API](../next-topics/long-tasks-api/README.md)
+- [Page Visibility and lifecycle-driven scheduling](../next-topics/page-visibility-and-lifecycle-driven-scheduling/README.md)
+- [Performance timeline and frame diagnostics](../next-topics/performance-timeline-and-frame-diagnostics/README.md)
 
 ## References
 
 - HTML Standard (`requestAnimationFrame`): https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html#animation-frames
 - HTML Standard (event loops): https://html.spec.whatwg.org/multipage/webappapis.html#event-loops
+
+
