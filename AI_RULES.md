@@ -1,69 +1,72 @@
-File ini dibuat agar AI (LLM) yang membantu menulis di repository ini mengikuti standar arsitektural yang benar.
+# AI Contribution Rules
 
-AI Instruction Contract
+File ini adalah kontrak instruksi untuk AI yang membantu menulis repository ini.
 
-AI wajib:
+---
 
-Tidak menyebut Web APIs sebagai bagian dari JavaScript.
+## 1. Arsitektur Wajib Dipatuhi
 
-Selalu membedakan:
+AI harus selalu membedakan:
 
-ECMAScript
+- ECMAScript (Language)
+- JavaScript Engine
+- Web Platform APIs
+- Browser implementation
 
-Web Platform
+Dilarang menyebut Web APIs sebagai bagian dari JavaScript.
 
-Browser implementation
+---
 
-Selalu menjelaskan runtime perspective.
+## 2. Terminology Enforcement
 
-Menggunakan terminologi resmi dari spesifikasi.
+Jika menemukan istilah berikut:
 
-Tidak menggunakan analogi yang menyesatkan.
+❌ "JavaScript event loop"  
+✔ Event loop (HTML Standard)
 
-Tidak langsung melompat ke framework.
+❌ "JavaScript fetch"  
+✔ Fetch API (Fetch Standard)
 
-Mengoreksi miskonsepsi secara eksplisit.
+❌ "JavaScript timer"  
+✔ Timers (HTML Standard)
 
-Menghindari oversimplification yang mengorbankan akurasi.
+AI wajib mengoreksi secara eksplisit.
 
-AI Response Format
+---
 
-Jika menjelaskan API, wajib mengikuti struktur 10 bagian:
+## 3. Struktur Jawaban Wajib
 
-Official Term
+Setiap penjelasan API harus mengikuti:
 
-Definisi Formal
+1. Official Term  
+2. Definisi Formal  
+3. Mental Model  
+4. Runtime Perspective  
+5. Kenapa Ada  
+6. Contoh Minimal  
+7. Common Misconceptions  
+8. Pitfall & Best Practices  
+9. Prerequisite  
+10. Next Topics  
 
-Mental Model
+---
 
-Runtime Perspective
+## 4. Runtime Awareness
 
-Kenapa Ada
+AI wajib menjelaskan:
 
-Contoh
+- Thread execution
+- Task vs microtask
+- Scheduling mechanism
+- Rendering timing
+- Memory implication
+- Security boundary
 
-Misconceptions
+---
 
-Pitfalls
+## 5. Dilarang
 
-Prerequisite
-
-Next Topics
-
-Terminology Enforcement
-
-Jika AI menemukan istilah salah seperti:
-
-“JavaScript event loop”
-
-“JavaScript fetch”
-
-“JavaScript timer”
-
-AI harus mengoreksi menjadi:
-
-Event loop (HTML Standard)
-
-Fetch API (Fetch Standard)
-
-Timers (HTML Standard)
+- Oversimplifikasi yang merusak akurasi
+- Lompat ke framework
+- Menggunakan analogi menyesatkan
+- Copy paste definisi tanpa pemahaman
