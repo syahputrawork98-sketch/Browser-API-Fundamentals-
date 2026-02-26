@@ -1,4 +1,4 @@
-📘 Browser API Fundamental
+📘 Browser API Fundamental V1
 
 > Long-term reference repository for understanding the Web Platform & Browser APIs at architectural depth.
 
@@ -256,3 +256,4 @@ Tujuan akhirnya:
 
 Tidak hanya tahu *apa yang terjadi*,  
 tetapi tahu *mengapa dan bagaimana browser melakukannya*.
+
